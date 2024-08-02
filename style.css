@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;/
+}
+
+/* navbar styles */
+.navbar{
+  width: 85%;
+  height: 60px;
+  margin: 20px auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#595959; 
+  padding: 10px 20px;
+  border-radius: 50px; 
+  position: relative;
+}
+.contact-btn{
+  background-color: rgb(217, 217, 217);
+  color: black;
+  font-size: 18px;
+  padding: 8px 20px;
+  border-radius:50px ;
+ text-decoration: none;
+ transition: 0.3s background-color;
+}
+.contact-btn:hover{
+  background: linear-gradient(to right, #2165a9, #09bcc1);
+}
+
+/* Toggler Styles */
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 20;
+}
+
+.navbar-toggler-icon {
+  border: none;
+  border-radius: 2px;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+}
+.navbar-toggler :focus,.btn-close:focus{
+  box-shadow: none;
+  outline: none;
+  color: #09bcc1;
+}
+.nav-link{
+  color:grey;
+  font-weight: 700;
+  font-size:18px;
+  position: relative;
+
+}
+.nav-link:hover,.nav-link.active{
+  color: black;
+}
+@media(min-width:991px){
+.nav-link::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width:0;
+  height: 2px;
+  background-color:black;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+.nav-link:hover::before{
+  width: 100%;
+  visibility: visible;
+}
+}
+.nav-logo{
+  width: 66px;
+  height: 46px;
+}
+/* hero-section styles */
+.hero-section{
+  position: absolute;  
+  width: 741px; 
+  height: 258px; 
+  top: 150px; 
+  padding-left: 50px; 
+  text-align: center;
+  margin-left: -30px;
+
+}
+.hero-container {
+  justify-content: center;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding-left: 10px;
+  position: relative;
+}
+.hero-text {
+  font-family: 'Proza Libre', sans-serif; 
+  font-weight: 400;
+  font-size: 63px; 
+  line-height: 86.01px; 
+  color: #FFFFFF; 
+  position: relative;
+}
+.hero-text span {
+  display: block;
+  color: #FFFFFF;  
+  
+}
+.hero-text .text{
+  position: absolute;
+  top: 80px;
+  left: 50px;
+}
+
+.hero-text .highlight {
+  color: #FFFF00; 
+  position: absolute;
+   top: 150px; 
+  left: 50px;
+}
+/* Banner image */
+.banner-images{
+  width: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 1040px;
+  margin-top: 100px; 
+
+}
+.banner-images .items{
+  width: 48%;
+  height: 300px;
+}
+.banner-images .items.img{
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+}
+
+.one>img{
+  object-fit: cover;
+  object-position: center center;
+  width:196px ;
+  height: 234px;
+  padding: 15px;
+  border-radius: 70px  0px 70px 0px;
+  
+}
+
+.two>img{
+  object-fit: cover;
+  object-position: center center;
+  width:196px ;
+  height: 234px;
+  padding: 15px;
+  border-radius: 0px  0px 70px 0px;
+  
+  
+}
+.three>img{
+  object-fit: cover;
+  object-position: center center;
+  width:196px ;
+  height: 234px;
+  padding: 15px;
+  border-radius: 0px  0px 70px 0px;
+  
+}
+
+.four>img{
+  object-fit: cover;
+  object-position: center center;
+  width:196px ;
+  height: 234px;
+  padding: 15px;
+  border-radius: 70px  0px 70px 0px;
+}
+.two{
+  
+  height: 200px;
+  
+}
+
+.three{
+  
+  height: 200px;
+  
+}
+
+.four{
+  
+  height: 200px;
+}
+
+/* Contact Button Styles */
+button.contact-btn-2 {
+  width: 190px;
+  height: 69px;
+  position: absolute;
+  top: 300px;
+  left: 50px;
+  border-radius: 40px;
+  background-color: #FFBA36;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+button.contact-btn-2 a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Hover, Active, Focus Effects for Contact Button */
+button.contact-btn-2:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+button.contact-btn-2:active {
+  background-color: #1e7e34;
+  transform: scale(1);
+}
+
+button.contact-btn-2:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+}
+
+/* Explore Button Styles */
+.explore-btn {
+  display: inline-block;
+  width: 200px;
+  height: 69px;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  position: absolute;
+  top: 300px;
+  left: 270px;
+  text-align: center;
+  line-height: 27px;
+  padding: 0;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.explore-btn a {
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  line-height: 27px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Hover, Active, Focus Effects for Explore Button */
+.explore-btn:hover {
+  background-color:#218838;
+  color: #000000;
+  border-color: #218838;
+  transform: scale(1.05);
+}
+
+.explore-btn:active {
+  background-color:#218838;
+  border-color: #1e7e34;
+  transform: scale(1);
+}
+
+.explore-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+}
+
+/* Responsive */
+@media screen and (max-width: 1432px) {
+  .navbar {
+    padding: 10px 15px;
+    width:100%;
+
+  }
+
+}
+
+/* Medium screens */
+@media screen and (max-width: 1250px) {
+  .hero-text {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Smaller screens */
+@media screen and (max-width: 1070px) {
+  .hero-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-text{
+    width: 100%;
+    margin-right: 0!important;
+    padding: 0;
+  }
+  .hero-text p{
+    font-size:50px;
+    margin-left:-180px;
+  }
+  button.contact-btn-2 {
+    width:200px;
+    height: 60px;
+   
+  }
+  .explore-btn {
+    width: 200px;
+    height: 60px;
+  }
+  .banner-images{
+    width: 80%;
+    margin: 0;
+    padding: 0;;
+    gap: 1px
+  }
+  .banner-images-items{
+    width: 40%;
+    height: 300px;
+  }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 992px) {
+  .hero-text {
+    font-size: 55px;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width:100%;
+
+  }
+
+  .navbar-toggler {
+    align-self: flex-end;
+  }
+  .banner-images{
+    width: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin:550px 0 80px 0;
+    padding: 0;
+    
+
+  
+  }
+
+  
+ 
+
+}
+      
+  
